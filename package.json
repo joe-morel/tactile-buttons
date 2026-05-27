@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "registry:sync": "cp src/components/ui/button.tsx registry/tactile-buttons/ui/button.tsx",
+    "registry:build": "npm run registry:sync && shadcn build -o public/r",
+    "build": "npm run registry:build && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },

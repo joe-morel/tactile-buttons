@@ -32,11 +32,13 @@ Las variantes estándar de shadcn (`default`, `outline`, `secondary`, `ghost`, `
 
 ### Con shadcn/ui
 
+Requiere [shadcn init](https://ui.shadcn.com/docs/installation) antes. Un solo comando instala el `Button` táctil completo (reemplaza `components/ui/button.tsx`):
+
 ```bash
-npx shadcn@latest add button
+npx shadcn@latest add https://raw.githubusercontent.com/joe-morel/tactile-buttons/main/public/r/button.json
 ```
 
-Añade las entradas `classic`, `tactile`, `dark` y `soft` en `variants.variant` de `button.tsx`. Ver [`src/components/ui/button.tsx`](./src/components/ui/button.tsx).
+Tras desplegar este sitio, puedes usar tu dominio: `https://TU-DOMINIO/r/button.json`
 
 ### Manual
 

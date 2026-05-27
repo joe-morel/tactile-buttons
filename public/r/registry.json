@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "tactile-buttons",
+  "homepage": "https://github.com/joe-morel/tactile-buttons",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "shadcn/ui Button with tactile variants (classic, tactile, dark, soft).",
+      "dependencies": [
+        "class-variance-authority",
+        "radix-ui",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "files": [
+        {
+          "path": "registry/tactile-buttons/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    }
+  ]
+}

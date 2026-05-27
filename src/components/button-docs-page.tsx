@@ -16,11 +16,14 @@ const usageCode = `import { Button } from "@/components/ui/button"
 
 <Button variant="tactile">Click me</Button>`
 
+const BUTTON_REGISTRY_URL =
+  "https://raw.githubusercontent.com/joe-morel/tactile-buttons/main/public/r/button.json"
+
 const shadcnCommands = {
-  pnpm: "pnpm dlx shadcn@latest add button",
-  npm: "npx shadcn@latest add button",
-  yarn: "yarn dlx shadcn@latest add button",
-  bun: "bunx shadcn@latest add button",
+  pnpm: `pnpm dlx shadcn@latest add ${BUTTON_REGISTRY_URL}`,
+  npm: `npx shadcn@latest add ${BUTTON_REGISTRY_URL}`,
+  yarn: `yarn dlx shadcn@latest add ${BUTTON_REGISTRY_URL}`,
+  bun: `bunx shadcn@latest add ${BUTTON_REGISTRY_URL}`,
 } as const
 
 const manualCommands = {
@@ -125,7 +128,7 @@ function InstallTabs() {
 
       <p className="text-sm text-muted-foreground">
         {tab === "shadcn"
-          ? "Then add the classic, tactile, dark, and soft variants to variants.variant in button.tsx (see Full source below)."
+          ? "Requires shadcn init and @/lib/utils. Replaces components/ui/button.tsx with the full tactile Button (standard + classic, tactile, dark, soft variants). Back up custom changes first."
           : "Copy button.tsx and lib/utils.ts from this repository."}
       </p>
     </div>
