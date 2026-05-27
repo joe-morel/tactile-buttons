@@ -38,12 +38,14 @@ const buttonVariants = cva(
           ].join(" "),
         tactile:
           [
-            "border-blue-700/80 bg-blue-600 text-white",
-            "shadow-[inset_0_1px_0_rgba(255,255,255,0.36),0_3px_0_rgb(30,64,175),0_4px_8px_rgba(15,23,42,0.12)]",
-            "hover:bg-blue-700",
-            "hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.4),0_3px_0_rgb(30,64,175),0_6px_12px_rgba(15,23,42,0.14)]",
-            "active:translate-y-px active:bg-blue-700",
-            "active:shadow-[inset_0_2px_4px_rgba(15,23,42,0.2),0_2px_0_rgb(30,64,175),0_3px_6px_rgba(15,23,42,0.1)]",
+            "[--tactile-bg:var(--color-blue-600)]",
+            "border border-[color-mix(in_oklab,var(--tactile-bg)_78%,black)]",
+            "bg-[var(--tactile-bg)] text-white",
+            "shadow-[inset_0_1px_0_rgba(255,255,255,0.36),0_3px_0_color-mix(in_oklab,var(--tactile-bg)_68%,black),0_4px_8px_color-mix(in_oklab,var(--tactile-bg)_28%,transparent)]",
+            "hover:bg-[color-mix(in_oklab,var(--tactile-bg)_90%,black)]",
+            "hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.4),0_3px_0_color-mix(in_oklab,var(--tactile-bg)_68%,black),0_6px_12px_color-mix(in_oklab,var(--tactile-bg)_32%,transparent)]",
+            "active:translate-y-px active:bg-[color-mix(in_oklab,var(--tactile-bg)_90%,black)]",
+            "active:shadow-[inset_0_2px_4px_color-mix(in_oklab,var(--tactile-bg)_40%,black),0_2px_0_color-mix(in_oklab,var(--tactile-bg)_68%,black),0_3px_6px_color-mix(in_oklab,var(--tactile-bg)_22%,transparent)]",
           ].join(" "),
         dark:
           [
