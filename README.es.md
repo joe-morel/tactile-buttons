@@ -35,10 +35,10 @@ Las variantes estándar de shadcn (`default`, `outline`, `secondary`, `ghost`, `
 Requiere [shadcn init](https://ui.shadcn.com/docs/installation) antes. Un solo comando instala el `Button` táctil completo (reemplaza `components/ui/button.tsx`):
 
 ```bash
-npx shadcn@latest add https://raw.githubusercontent.com/joe-morel/tactile-buttons/main/public/r/button.json
+npx shadcn@latest add https://tactile-buttons.vercel.app/r/button.json
 ```
 
-Tras desplegar este sitio, puedes usar tu dominio: `https://TU-DOMINIO/r/button.json`
+Si tu URL de Vercel o dominio propio es otro, usa `https://TU-DOMINIO/r/button.json` (misma ruta `/r/button.json`).
 
 ### Manual
 

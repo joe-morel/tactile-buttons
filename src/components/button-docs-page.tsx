@@ -16,8 +16,7 @@ const usageCode = `import { Button } from "@/components/ui/button"
 
 <Button variant="tactile">Click me</Button>`
 
-const BUTTON_REGISTRY_URL =
-  "https://raw.githubusercontent.com/joe-morel/tactile-buttons/main/public/r/button.json"
+const BUTTON_REGISTRY_URL = "https://tactile-buttons.vercel.app/r/button.json"
 
 const shadcnCommands = {
   pnpm: `pnpm dlx shadcn@latest add ${BUTTON_REGISTRY_URL}`,
