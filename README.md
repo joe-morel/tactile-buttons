@@ -1,73 +1,75 @@
-# React + TypeScript + Vite
+# Tactile Buttons
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Tactile button variants for [shadcn/ui](https://ui.shadcn.com). Copy them into your existing `button.tsx` — subtle shadows, classic styling, and press interactions.
 
-Currently, two official plugins are available:
+**Open Source. Copy-paste friendly.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**English** · [Español](./README.es.md)
 
-## React Compiler
+## Documentation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Run the demo locally to preview variants, installation, and full source:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/joe-morel/tactile-buttons.git
+cd tactile-buttons
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Variants
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Variant | Description |
+| --- | --- |
+| `classic` | Blue primary with soft inset highlight and light press |
+| `tactile` | 3D stack shadow with a deeper click interaction |
+| `dark` | High-contrast dark CTA |
+| `soft` | Light bordered secondary action |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Standard shadcn variants (`default`, `outline`, `secondary`, `ghost`, `destructive`, `link`) ship with the full component in this repo.
+
+## Installation
+
+### With shadcn/ui
+
+```bash
+npx shadcn@latest add button
 ```
+
+Add the `classic`, `tactile`, `dark`, and `soft` entries to `variants.variant` in `button.tsx`. See [`src/components/ui/button.tsx`](./src/components/ui/button.tsx).
+
+### Manual
+
+```bash
+npm install class-variance-authority clsx tailwind-merge radix-ui
+```
+
+Copy `src/components/ui/button.tsx` and `src/lib/utils.ts`, then match imports to your project (`@/`, `radix-ui` vs `@radix-ui/react-slot`).
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/button"
+
+<Button variant="tactile">Click me</Button>
+```
+
+## Development
+
+```bash
+npm run dev
+npm run build
+npm run lint
+```
+
+## Acknowledgments
+
+Not affiliated with Vercel or shadcn/ui. Built on the [shadcn/ui](https://ui.shadcn.com) Button pattern. Thanks to [@shadcn](https://github.com/shadcn).
+
+## Author
+
+**Joe Morel** — [@joe-morel](https://github.com/joe-morel) · [@joe_morel](https://x.com/joe_morel) · [@joe.morel](https://www.threads.com/@joe.morel)
+
+## License
+
+MIT

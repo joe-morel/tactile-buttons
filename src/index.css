@@ -132,4 +132,25 @@
   html {
     @apply font-sans;
   }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.shiki-docs .shiki,
+.shiki-docs pre.shiki {
+  background-color: transparent !important;
+  overflow: visible !important;
+  max-height: none !important;
+}
+
+/* Scroll without visible scrollbar (wheel / trackpad still works) */
+.code-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.code-scroll::-webkit-scrollbar {
+  display: none;
 }
