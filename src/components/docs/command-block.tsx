@@ -4,7 +4,7 @@ import { Terminal } from "lucide-react"
 import { CopyButton } from "@/components/docs/copy-button"
 import { cn } from "@/lib/utils"
 
-const packageManagers = ["pnpm", "npm", "yarn", "bun"] as const
+const packageManagers = ["npm", "pnpm", "yarn", "bun"] as const
 
 type PackageManager = (typeof packageManagers)[number]
 
@@ -13,7 +13,7 @@ export function CommandBlock({
 }: {
   commands: Record<PackageManager, string>
 }) {
-  const [pm, setPm] = React.useState<PackageManager>("pnpm")
+  const [pm, setPm] = React.useState<PackageManager>("npm")
   const code = commands[pm]
 
   return (
@@ -45,7 +45,7 @@ export function CommandBlock({
       </div>
 
       <div className="overflow-x-auto px-4 py-3.5">
-        <code className="font-mono text-sm text-foreground">{code}</code>
+        <code className="break-all font-mono text-sm text-foreground">{code}</code>
       </div>
     </div>
   )

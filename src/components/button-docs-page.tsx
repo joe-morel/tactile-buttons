@@ -19,18 +19,17 @@ const usageCode = `import { Button } from "@/components/ui/button"
 const BUTTON_REGISTRY_URL = "https://tactile-buttons.vercel.app/r/button.json"
 
 const shadcnCommands = {
-  pnpm: `pnpm dlx shadcn@latest add ${BUTTON_REGISTRY_URL}`,
-  npm: `npx shadcn@latest add ${BUTTON_REGISTRY_URL}`,
-  yarn: `yarn dlx shadcn@latest add ${BUTTON_REGISTRY_URL}`,
-  bun: `bunx shadcn@latest add ${BUTTON_REGISTRY_URL}`,
+  npm: `npx shadcn@latest add "${BUTTON_REGISTRY_URL}"`,
+  pnpm: `pnpm dlx shadcn@latest add "${BUTTON_REGISTRY_URL}"`,
+  yarn: `yarn dlx shadcn@latest add "${BUTTON_REGISTRY_URL}"`,
+  bun: `bunx shadcn@latest add "${BUTTON_REGISTRY_URL}"`,
 } as const
 
 const manualCommands = {
-  pnpm:
-    "pnpm add class-variance-authority clsx tailwind-merge @radix-ui/react-slot",
-  npm: "npm install class-variance-authority clsx tailwind-merge @radix-ui/react-slot",
-  yarn: "yarn add class-variance-authority clsx tailwind-merge @radix-ui/react-slot",
-  bun: "bun add class-variance-authority clsx tailwind-merge @radix-ui/react-slot",
+  npm: "npm install class-variance-authority clsx tailwind-merge radix-ui",
+  pnpm: "pnpm add class-variance-authority clsx tailwind-merge radix-ui",
+  yarn: "yarn add class-variance-authority clsx tailwind-merge radix-ui",
+  bun: "bun add class-variance-authority clsx tailwind-merge radix-ui",
 } as const
 
 const cursorCode = `@layer base {
